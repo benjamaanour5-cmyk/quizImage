@@ -148,7 +148,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun verifierReponse(indiceChoix: Int) {
-        // Empêche de répondre plusieurs fois à la même question.
         if (aRepondu) return
 
         aRepondu = true
@@ -168,7 +167,6 @@ class MainActivity : AppCompatActivity() {
 
         txtFeedback.visibility = View.VISIBLE
 
-        // Les trois choix sont désactivés après la réponse.
         btnChoix.forEach { it.isEnabled = false }
 
         btnSuivant.isEnabled = true
@@ -186,7 +184,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun afficherResultat() {
-        // La cinquième réponse a déjà été validée.
         txtResultat.text =
             "Quiz terminé !\nVotre score : $score/${questions.size}"
 
